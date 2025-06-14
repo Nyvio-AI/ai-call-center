@@ -1,2 +1,3 @@
-# ai-call-center
-Customer service AI agent platform with Plivo and OpenAI
+# Solar app template
+
+Monorepo template for Solar apps running on microVMs.
