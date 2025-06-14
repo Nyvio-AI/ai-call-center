@@ -5,13 +5,10 @@ services:
   github:
     repo: Nyvio-AI/ai-call-center
     branch: main
-  run_command: uvicorn main:app --host 0.0.0.0 --port $PORT
+  run_command: uvicorn api.bootstrap:app --host 0.0.0.0 --port $PORT
   environment_slug: python
   instance_count: 1
   instance_size_slug: basic-xxs
-  http_port: 8080
-  routes:
-  - path: /api
   envs:
   - key: PLIVO_AUTH_ID
     scope: RUN_TIME
@@ -32,8 +29,6 @@ services:
   environment_slug: node-js
   instance_count: 1
   instance_size_slug: basic-xxs
-  routes:
-  - path: /
 
 databases:
 - name: db
